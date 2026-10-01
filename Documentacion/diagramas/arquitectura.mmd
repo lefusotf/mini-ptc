@@ -1,0 +1,19 @@
+flowchart LR
+    U(("Usuario")) --> V
+    subgraph V["VISTA  (ClinicaMedica/Vista)"]
+        direction TB
+        L[FrmLogin] --> PR[FrmPrincipal]
+        PR --> F["FrmPacientes · FrmMedicos · FrmCitas<br/>FrmHistorial · FrmUsuarios · FrmRolesPermisos<br/>FrmEspecialidades · FrmBitacora"]
+    end
+    subgraph M["MODELO  (ClinicaMedica/Modelo)"]
+        direction TB
+        E["Entidades<br/>Paciente, Medico, Cita..."]
+        D["DAO<br/>PacienteDAO, CitaDAO, LoginDAO..."]
+        UT["Utilidades<br/>Seguridad (BCrypt) · Sesion · Logger"]
+        C[Conexion]
+        D --> C
+    end
+    V -- "llama métodos" --> D
+    D -- "devuelve objetos" --> E
+    V --> UT
+    C -- "SqlClient + parámetros" --> DB[("SQL Server<br/>ClinicaMedicaDB")]

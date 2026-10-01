@@ -1,0 +1,17 @@
+flowchart LR
+    A["👤<br/>Recepcionista"]
+    subgraph S["Sistema de Gestión de Clínica Médica"]
+        direction TB
+        CU1([CU-01 Iniciar sesión])
+        CU2([CU-02 Cambiar contraseña])
+        CU3([CU-03 Gestionar pacientes])
+        CU4([CU-04 Agendar / reprogramar / cancelar citas])
+        CU5([CU-05 Consultar agenda de citas])
+        V([Validar disponibilidad de horario])
+        CU4 -. "«include»" .-> V
+    end
+    A --- CU1
+    A --- CU2
+    A --- CU3
+    A --- CU4
+    A --- CU5

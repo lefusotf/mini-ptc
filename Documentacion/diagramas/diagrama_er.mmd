@@ -1,0 +1,81 @@
+erDiagram
+    Roles ||--o{ RolPermisos : "tiene"
+    Permisos ||--o{ RolPermisos : "asignado en"
+    Roles ||--o{ Usuarios : "clasifica"
+    Usuarios |o--o| Medicos : "inicia sesión como"
+    Especialidades ||--o{ Medicos : "agrupa"
+    Pacientes ||--o{ Citas : "solicita"
+    Medicos ||--o{ Citas : "atiende"
+    Usuarios |o--o{ Citas : "registra"
+    Pacientes ||--o{ HistorialClinico : "posee"
+    Medicos ||--o{ HistorialClinico : "redacta"
+    Citas |o--o{ HistorialClinico : "origina"
+    Usuarios |o--o{ Bitacora : "genera"
+
+    Roles { int IdRol PK
+        varchar Nombre UK
+        varchar Descripcion }
+    Permisos { int IdPermiso PK
+        varchar Codigo UK
+        varchar Nombre
+        varchar Descripcion }
+    RolPermisos { int IdRol PK,FK
+        int IdPermiso PK,FK }
+    Usuarios { int IdUsuario PK
+        varchar NombreUsuario UK
+        varchar NombreCompleto
+        varchar Correo
+        varchar ClaveHash "BCrypt"
+        int IdRol FK
+        bit Activo
+        int IntentosFallidos
+        datetime FechaCreacion
+        datetime UltimoAcceso }
+    Especialidades { int IdEspecialidad PK
+        varchar Nombre UK
+        varchar Descripcion }
+    Medicos { int IdMedico PK
+        varchar Nombres
+        varchar Apellidos
+        varchar JVPM UK
+        varchar Telefono
+        varchar Correo
+        int IdEspecialidad FK
+        int IdUsuario FK "nullable, unico"
+        bit Activo }
+    Pacientes { int IdPaciente PK
+        varchar Nombres
+        varchar Apellidos
+        varchar DUI UK "nullable"
+        date FechaNacimiento
+        char Genero
+        varchar Telefono
+        varchar Correo
+        varchar Direccion
+        varchar TipoSangre
+        varchar Alergias
+        datetime FechaRegistro }
+    Citas { int IdCita PK
+        int IdPaciente FK
+        int IdMedico FK
+        date Fecha
+        time Hora
+        varchar Motivo
+        varchar Estado
+        varchar Observaciones
+        int IdUsuarioRegistro FK
+        datetime FechaRegistro }
+    HistorialClinico { int IdHistorial PK
+        int IdPaciente FK
+        int IdMedico FK
+        int IdCita FK "nullable"
+        datetime FechaConsulta
+        varchar Diagnostico
+        varchar Tratamiento
+        varchar Observaciones }
+    Bitacora { int IdBitacora PK
+        int IdUsuario FK "nullable"
+        varchar Accion
+        varchar Modulo
+        varchar Descripcion
+        datetime Fecha }

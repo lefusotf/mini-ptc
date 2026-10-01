@@ -1,0 +1,18 @@
+flowchart LR
+    A["👤<br/>Médico"]
+    subgraph S["Sistema de Gestión de Clínica Médica"]
+        direction TB
+        CU1([CU-01 Iniciar sesión])
+        CU2([CU-02 Cambiar contraseña])
+        CU6([CU-06 Ver mis citas])
+        CU7([CU-07 Atender cita / cambiar estado])
+        CU8([CU-08 Registrar y actualizar historial clínico])
+        CU9([CU-09 Consultar historial clínico])
+        CU8 -. "«extend»" .-> CU7
+    end
+    A --- CU1
+    A --- CU2
+    A --- CU6
+    A --- CU7
+    A --- CU8
+    A --- CU9
