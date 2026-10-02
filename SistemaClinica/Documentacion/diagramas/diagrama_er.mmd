@@ -1,0 +1,56 @@
+erDiagram
+    Rol ||--o{ RolPermiso : "tiene"
+    Permiso ||--o{ RolPermiso : "asignado en"
+    Rol ||--o{ Usuario : "clasifica"
+    Usuario |o--o| Medico : "inicia sesión como"
+    Especialidad ||--o{ Medico : "agrupa"
+    Paciente ||--o{ Cita : "solicita"
+    Medico ||--o{ Cita : "atiende"
+    Paciente ||--o{ Historial : "posee"
+    Medico ||--o{ Historial : "redacta"
+
+    Rol { int idRol PK
+        varchar nombreRol }
+    Permiso { int idPermiso PK
+        varchar nombrePermiso }
+    RolPermiso { int idRolPermiso PK
+        int id_Rol FK
+        int id_Permiso FK }
+    Usuario { int idUsuario PK
+        varchar nombreUsuario UK
+        varchar clave "BCrypt"
+        varchar nombreCompleto
+        int id_Rol FK
+        bit activo }
+    Especialidad { int idEspecialidad PK
+        varchar nombreEspecialidad }
+    Medico { int idMedico PK
+        varchar nombreMedico
+        varchar telefono
+        varchar correo
+        int id_Especialidad FK
+        int id_Usuario FK "puede ser NULL" }
+    Paciente { int idPaciente PK
+        varchar nombrePaciente
+        varchar dui
+        date fechaNacimiento
+        varchar genero
+        varchar telefono
+        varchar direccion }
+    Cita { int idCita PK
+        int id_Paciente FK
+        int id_Medico FK
+        date fecha
+        varchar hora
+        varchar motivo
+        varchar estado }
+    Historial { int idHistorial PK
+        int id_Paciente FK
+        int id_Medico FK
+        datetime fecha
+        varchar diagnostico
+        varchar tratamiento }
+    Bitacora { int idBitacora PK
+        varchar usuario
+        varchar accion
+        datetime fecha }
