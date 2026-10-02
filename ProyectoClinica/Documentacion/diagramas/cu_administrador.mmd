@@ -1,0 +1,17 @@
+flowchart LR
+    A["👤<br/>Administrador<br/>(acceso total)"]
+    subgraph S["Sistema de Gestión de Clínica Médica"]
+        direction TB
+        CU10([CU-10 Gestionar médicos])
+        CU11([CU-11 Gestionar especialidades])
+        CU12([CU-12 Gestionar usuarios])
+        CU13([CU-13 Gestionar permisos])
+        CU14([CU-14 Consultar bitácora])
+        T(["CU-01 a CU-09<br/>(todos los casos de Recepcionista y Médico)"])
+    end
+    A --- CU10
+    A --- CU11
+    A --- CU12
+    A --- CU13
+    A --- CU14
+    A --- T
