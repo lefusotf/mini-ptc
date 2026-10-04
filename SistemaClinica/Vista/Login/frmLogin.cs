@@ -7,8 +7,6 @@ namespace Vista.Login
 {
     public partial class frmLogin : Form
     {
-        private int intentos = 0;   // a los 3 intentos fallidos se cierra el programa
-
         public frmLogin()
         {
             InitializeComponent();
@@ -39,7 +37,6 @@ namespace Vista.Login
 
             if (Usuario.iniciarSesion(txtUsuario.Text.Trim(), txtClave.Text))
             {
-                intentos = 0;
                 Bitacora.registrar("Inició sesión");
                 MessageBox.Show("Bienvenido " + Sesion.NombreUsuario + "\nRol: " + Sesion.Rol, "Acceso correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
@@ -57,22 +54,10 @@ namespace Vista.Login
             }
             else
             {
-                intentos++;
-                if (intentos >= 3)
-                {
-                    MessageBox.Show("Ha fallado 3 veces. El programa se cerrará.", "Acceso denegado", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    Application.Exit();
-                    return;
-                }
-                MessageBox.Show("Usuario o contraseña incorrectos. Intentos restantes: " + (3 - intentos), "Acceso denegado", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Usuario o contraseña incorrectos.", "Acceso denegado", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtClave.Clear();
                 txtClave.Focus();
             }
-        }
-
-        private void chkMostrar_CheckedChanged(object sender, EventArgs e)
-        {
-            txtClave.UseSystemPasswordChar = !chkMostrar.Checked;
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
