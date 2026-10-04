@@ -34,9 +34,10 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tpRegistrar = new System.Windows.Forms.TabPage();
+            this.pnlRegistrar = new System.Windows.Forms.Panel();
             this.lblTituloRegistrar = new System.Windows.Forms.Label();
             this.lblSubRegistrar = new System.Windows.Forms.Label();
-            this.pnlRegistrar = new System.Windows.Forms.Panel();
+            this.pnlLineaRegistrar = new System.Windows.Forms.Panel();
             this.lblNombre = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.btnRegistrar = new System.Windows.Forms.Button();
@@ -53,6 +54,7 @@
             this.tabControl1.SuspendLayout();
             this.tpRegistrar.SuspendLayout();
             this.pnlRegistrar.SuspendLayout();
+            this.pnlLineaRegistrar.SuspendLayout();
             this.tpVer.SuspendLayout();
             this.pnlEditar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEspecialidades)).BeginInit();
@@ -77,8 +79,6 @@
             // 
             // tpRegistrar
             // 
-            this.tpRegistrar.Controls.Add(this.lblTituloRegistrar);
-            this.tpRegistrar.Controls.Add(this.lblSubRegistrar);
             this.tpRegistrar.Controls.Add(this.pnlRegistrar);
             this.tpRegistrar.BackColor = System.Drawing.Color.FromArgb(((245)), ((247)), ((250)));
             this.tpRegistrar.Font = new System.Drawing.Font("Segoe UI", 10F);
@@ -90,14 +90,29 @@
             this.tpRegistrar.Text = "Registrar";
             this.tpRegistrar.UseVisualStyleBackColor = false;
             // 
+            // pnlRegistrar
+            // 
+            this.pnlRegistrar.Controls.Add(this.lblTituloRegistrar);
+            this.pnlRegistrar.Controls.Add(this.lblSubRegistrar);
+            this.pnlRegistrar.Controls.Add(this.pnlLineaRegistrar);
+            this.pnlRegistrar.Controls.Add(this.lblNombre);
+            this.pnlRegistrar.Controls.Add(this.txtNombre);
+            this.pnlRegistrar.Controls.Add(this.btnRegistrar);
+            this.pnlRegistrar.BackColor = System.Drawing.Color.White;
+            this.pnlRegistrar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pnlRegistrar.Location = new System.Drawing.Point(336, 173);
+            this.pnlRegistrar.Name = "pnlRegistrar";
+            this.pnlRegistrar.Size = new System.Drawing.Size(420, 256);
+            this.pnlRegistrar.TabIndex = 2;
+            // 
             // lblTituloRegistrar
             // 
             this.lblTituloRegistrar.AutoSize = true;
             this.lblTituloRegistrar.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
             this.lblTituloRegistrar.ForeColor = System.Drawing.Color.FromArgb(((43)), ((48)), ((59)));
-            this.lblTituloRegistrar.Location = new System.Drawing.Point(30, 18);
+            this.lblTituloRegistrar.Location = new System.Drawing.Point(27, 22);
             this.lblTituloRegistrar.Name = "lblTituloRegistrar";
-            this.lblTituloRegistrar.TabIndex = 2;
+            this.lblTituloRegistrar.TabIndex = 3;
             this.lblTituloRegistrar.Text = "Registrar especialidad";
             // 
             // lblSubRegistrar
@@ -105,30 +120,27 @@
             this.lblSubRegistrar.AutoSize = true;
             this.lblSubRegistrar.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.lblSubRegistrar.ForeColor = System.Drawing.Color.FromArgb(((120)), ((128)), ((140)));
-            this.lblSubRegistrar.Location = new System.Drawing.Point(32, 58);
+            this.lblSubRegistrar.Location = new System.Drawing.Point(30, 62);
             this.lblSubRegistrar.Name = "lblSubRegistrar";
-            this.lblSubRegistrar.TabIndex = 3;
-            this.lblSubRegistrar.Text = "Complete los datos y presione «Registrar». Los campos con * son obligatorios.";
+            this.lblSubRegistrar.TabIndex = 4;
+            this.lblSubRegistrar.Text = "Los campos con * son obligatorios.";
             // 
-            // pnlRegistrar
+            // pnlLineaRegistrar
             // 
-            this.pnlRegistrar.Controls.Add(this.lblNombre);
-            this.pnlRegistrar.Controls.Add(this.txtNombre);
-            this.pnlRegistrar.Controls.Add(this.btnRegistrar);
-            this.pnlRegistrar.BackColor = System.Drawing.Color.White;
-            this.pnlRegistrar.Location = new System.Drawing.Point(30, 95);
-            this.pnlRegistrar.Name = "pnlRegistrar";
-            this.pnlRegistrar.Size = new System.Drawing.Size(420, 181);
-            this.pnlRegistrar.TabIndex = 4;
+            this.pnlLineaRegistrar.BackColor = System.Drawing.Color.FromArgb(((41)), ((182)), ((182)));
+            this.pnlLineaRegistrar.Location = new System.Drawing.Point(30, 88);
+            this.pnlLineaRegistrar.Name = "pnlLineaRegistrar";
+            this.pnlLineaRegistrar.Size = new System.Drawing.Size(360, 2);
+            this.pnlLineaRegistrar.TabIndex = 5;
             // 
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.lblNombre.ForeColor = System.Drawing.Color.FromArgb(((120)), ((128)), ((140)));
-            this.lblNombre.Location = new System.Drawing.Point(30, 30);
+            this.lblNombre.Location = new System.Drawing.Point(30, 105);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.TabIndex = 5;
+            this.lblNombre.TabIndex = 6;
             this.lblNombre.Text = "NOMBRE DE LA ESPECIALIDAD *";
             // 
             // txtNombre
@@ -136,10 +148,10 @@
             this.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNombre.MaxLength = 100;
             this.txtNombre.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.txtNombre.Location = new System.Drawing.Point(30, 51);
+            this.txtNombre.Location = new System.Drawing.Point(30, 126);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(360, 28);
-            this.txtNombre.TabIndex = 6;
+            this.txtNombre.TabIndex = 7;
             // 
             // btnRegistrar
             // 
@@ -150,10 +162,10 @@
             this.btnRegistrar.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.btnRegistrar.ForeColor = System.Drawing.Color.White;
             this.btnRegistrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((33)), ((147)), ((81)));
-            this.btnRegistrar.Location = new System.Drawing.Point(190, 105);
+            this.btnRegistrar.Location = new System.Drawing.Point(190, 180);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(200, 46);
-            this.btnRegistrar.TabIndex = 7;
+            this.btnRegistrar.TabIndex = 8;
             this.btnRegistrar.Text = "✔  Registrar";
             this.btnRegistrar.UseVisualStyleBackColor = false;
             this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
@@ -169,7 +181,7 @@
             this.tpVer.Location = new System.Drawing.Point(4, 44);
             this.tpVer.Name = "tpVer";
             this.tpVer.Size = new System.Drawing.Size(1092, 602);
-            this.tpVer.TabIndex = 8;
+            this.tpVer.TabIndex = 9;
             this.tpVer.Text = "Ver / Actualizar / Eliminar";
             this.tpVer.UseVisualStyleBackColor = false;
             // 
@@ -181,10 +193,11 @@
             this.pnlEditar.Controls.Add(this.btnActualizar);
             this.pnlEditar.Controls.Add(this.btnEliminar);
             this.pnlEditar.BackColor = System.Drawing.Color.White;
+            this.pnlEditar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left)));
             this.pnlEditar.Location = new System.Drawing.Point(20, 20);
             this.pnlEditar.Name = "pnlEditar";
-            this.pnlEditar.Size = new System.Drawing.Size(310, 195);
-            this.pnlEditar.TabIndex = 9;
+            this.pnlEditar.Size = new System.Drawing.Size(310, 562);
+            this.pnlEditar.TabIndex = 10;
             // 
             // lblEditar
             // 
@@ -193,7 +206,7 @@
             this.lblEditar.ForeColor = System.Drawing.Color.FromArgb(((43)), ((48)), ((59)));
             this.lblEditar.Location = new System.Drawing.Point(20, 18);
             this.lblEditar.Name = "lblEditar";
-            this.lblEditar.TabIndex = 10;
+            this.lblEditar.TabIndex = 11;
             this.lblEditar.Text = "Editar seleccionado";
             // 
             // lblNombreAct
@@ -203,7 +216,7 @@
             this.lblNombreAct.ForeColor = System.Drawing.Color.FromArgb(((120)), ((128)), ((140)));
             this.lblNombreAct.Location = new System.Drawing.Point(20, 60);
             this.lblNombreAct.Name = "lblNombreAct";
-            this.lblNombreAct.TabIndex = 11;
+            this.lblNombreAct.TabIndex = 12;
             this.lblNombreAct.Text = "NOMBRE";
             // 
             // txtNombreAct
@@ -214,7 +227,7 @@
             this.txtNombreAct.Location = new System.Drawing.Point(20, 81);
             this.txtNombreAct.Name = "txtNombreAct";
             this.txtNombreAct.Size = new System.Drawing.Size(270, 28);
-            this.txtNombreAct.TabIndex = 12;
+            this.txtNombreAct.TabIndex = 13;
             // 
             // btnActualizar
             // 
@@ -228,7 +241,7 @@
             this.btnActualizar.Location = new System.Drawing.Point(20, 131);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(130, 42);
-            this.btnActualizar.TabIndex = 13;
+            this.btnActualizar.TabIndex = 14;
             this.btnActualizar.Text = "Actualizar";
             this.btnActualizar.UseVisualStyleBackColor = false;
             this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
@@ -245,7 +258,7 @@
             this.btnEliminar.Location = new System.Drawing.Point(160, 131);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(130, 42);
-            this.btnEliminar.TabIndex = 14;
+            this.btnEliminar.TabIndex = 15;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = false;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
@@ -257,7 +270,7 @@
             this.lblLista.ForeColor = System.Drawing.Color.FromArgb(((43)), ((48)), ((59)));
             this.lblLista.Location = new System.Drawing.Point(350, 24);
             this.lblLista.Name = "lblLista";
-            this.lblLista.TabIndex = 15;
+            this.lblLista.TabIndex = 16;
             this.lblLista.Text = "Lista de especialidades";
             // 
             // dgvEspecialidades
@@ -303,7 +316,7 @@
             this.dgvEspecialidades.Location = new System.Drawing.Point(350, 64);
             this.dgvEspecialidades.Name = "dgvEspecialidades";
             this.dgvEspecialidades.Size = new System.Drawing.Size(722, 518);
-            this.dgvEspecialidades.TabIndex = 16;
+            this.dgvEspecialidades.TabIndex = 17;
             this.dgvEspecialidades.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEspecialidades_CellClick);
             // 
             // errorProvider1
@@ -325,11 +338,13 @@
             this.Load += new System.EventHandler(this.frmEspecialidades_Load);
             this.pnlEditar.ResumeLayout(false);
             this.tpVer.ResumeLayout(false);
+            this.pnlLineaRegistrar.ResumeLayout(false);
             this.pnlRegistrar.ResumeLayout(false);
             this.tpRegistrar.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
             this.tpRegistrar.PerformLayout();
             this.pnlRegistrar.PerformLayout();
+            this.pnlLineaRegistrar.PerformLayout();
             this.tpVer.PerformLayout();
             this.pnlEditar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEspecialidades)).EndInit();
@@ -343,9 +358,10 @@
 
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tpRegistrar;
+        private System.Windows.Forms.Panel pnlRegistrar;
         private System.Windows.Forms.Label lblTituloRegistrar;
         private System.Windows.Forms.Label lblSubRegistrar;
-        private System.Windows.Forms.Panel pnlRegistrar;
+        private System.Windows.Forms.Panel pnlLineaRegistrar;
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Button btnRegistrar;

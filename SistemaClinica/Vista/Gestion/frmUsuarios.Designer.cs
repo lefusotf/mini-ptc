@@ -34,9 +34,10 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tpRegistrar = new System.Windows.Forms.TabPage();
+            this.pnlRegistrar = new System.Windows.Forms.Panel();
             this.lblTituloRegistrar = new System.Windows.Forms.Label();
             this.lblSubRegistrar = new System.Windows.Forms.Label();
-            this.pnlRegistrar = new System.Windows.Forms.Panel();
+            this.pnlLineaRegistrar = new System.Windows.Forms.Panel();
             this.lblUsuario = new System.Windows.Forms.Label();
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.lblNombreCompleto = new System.Windows.Forms.Label();
@@ -69,6 +70,7 @@
             this.tabControl1.SuspendLayout();
             this.tpRegistrar.SuspendLayout();
             this.pnlRegistrar.SuspendLayout();
+            this.pnlLineaRegistrar.SuspendLayout();
             this.tpVer.SuspendLayout();
             this.pnlEditar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).BeginInit();
@@ -93,8 +95,6 @@
             // 
             // tpRegistrar
             // 
-            this.tpRegistrar.Controls.Add(this.lblTituloRegistrar);
-            this.tpRegistrar.Controls.Add(this.lblSubRegistrar);
             this.tpRegistrar.Controls.Add(this.pnlRegistrar);
             this.tpRegistrar.BackColor = System.Drawing.Color.FromArgb(((245)), ((247)), ((250)));
             this.tpRegistrar.Font = new System.Drawing.Font("Segoe UI", 10F);
@@ -106,28 +106,11 @@
             this.tpRegistrar.Text = "Registrar";
             this.tpRegistrar.UseVisualStyleBackColor = false;
             // 
-            // lblTituloRegistrar
-            // 
-            this.lblTituloRegistrar.AutoSize = true;
-            this.lblTituloRegistrar.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
-            this.lblTituloRegistrar.ForeColor = System.Drawing.Color.FromArgb(((43)), ((48)), ((59)));
-            this.lblTituloRegistrar.Location = new System.Drawing.Point(30, 18);
-            this.lblTituloRegistrar.Name = "lblTituloRegistrar";
-            this.lblTituloRegistrar.TabIndex = 2;
-            this.lblTituloRegistrar.Text = "Registrar usuario";
-            // 
-            // lblSubRegistrar
-            // 
-            this.lblSubRegistrar.AutoSize = true;
-            this.lblSubRegistrar.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.lblSubRegistrar.ForeColor = System.Drawing.Color.FromArgb(((120)), ((128)), ((140)));
-            this.lblSubRegistrar.Location = new System.Drawing.Point(32, 58);
-            this.lblSubRegistrar.Name = "lblSubRegistrar";
-            this.lblSubRegistrar.TabIndex = 3;
-            this.lblSubRegistrar.Text = "Complete los datos y presione «Registrar». Los campos con * son obligatorios.";
-            // 
             // pnlRegistrar
             // 
+            this.pnlRegistrar.Controls.Add(this.lblTituloRegistrar);
+            this.pnlRegistrar.Controls.Add(this.lblSubRegistrar);
+            this.pnlRegistrar.Controls.Add(this.pnlLineaRegistrar);
             this.pnlRegistrar.Controls.Add(this.lblUsuario);
             this.pnlRegistrar.Controls.Add(this.txtUsuario);
             this.pnlRegistrar.Controls.Add(this.lblNombreCompleto);
@@ -140,19 +123,48 @@
             this.pnlRegistrar.Controls.Add(this.chkActivo);
             this.pnlRegistrar.Controls.Add(this.btnRegistrar);
             this.pnlRegistrar.BackColor = System.Drawing.Color.White;
-            this.pnlRegistrar.Location = new System.Drawing.Point(30, 95);
+            this.pnlRegistrar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pnlRegistrar.Location = new System.Drawing.Point(201, 105);
             this.pnlRegistrar.Name = "pnlRegistrar";
-            this.pnlRegistrar.Size = new System.Drawing.Size(690, 317);
-            this.pnlRegistrar.TabIndex = 4;
+            this.pnlRegistrar.Size = new System.Drawing.Size(690, 392);
+            this.pnlRegistrar.TabIndex = 2;
+            // 
+            // lblTituloRegistrar
+            // 
+            this.lblTituloRegistrar.AutoSize = true;
+            this.lblTituloRegistrar.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
+            this.lblTituloRegistrar.ForeColor = System.Drawing.Color.FromArgb(((43)), ((48)), ((59)));
+            this.lblTituloRegistrar.Location = new System.Drawing.Point(27, 22);
+            this.lblTituloRegistrar.Name = "lblTituloRegistrar";
+            this.lblTituloRegistrar.TabIndex = 3;
+            this.lblTituloRegistrar.Text = "Registrar usuario";
+            // 
+            // lblSubRegistrar
+            // 
+            this.lblSubRegistrar.AutoSize = true;
+            this.lblSubRegistrar.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.lblSubRegistrar.ForeColor = System.Drawing.Color.FromArgb(((120)), ((128)), ((140)));
+            this.lblSubRegistrar.Location = new System.Drawing.Point(30, 62);
+            this.lblSubRegistrar.Name = "lblSubRegistrar";
+            this.lblSubRegistrar.TabIndex = 4;
+            this.lblSubRegistrar.Text = "Los campos con * son obligatorios.";
+            // 
+            // pnlLineaRegistrar
+            // 
+            this.pnlLineaRegistrar.BackColor = System.Drawing.Color.FromArgb(((41)), ((182)), ((182)));
+            this.pnlLineaRegistrar.Location = new System.Drawing.Point(30, 88);
+            this.pnlLineaRegistrar.Name = "pnlLineaRegistrar";
+            this.pnlLineaRegistrar.Size = new System.Drawing.Size(630, 2);
+            this.pnlLineaRegistrar.TabIndex = 5;
             // 
             // lblUsuario
             // 
             this.lblUsuario.AutoSize = true;
             this.lblUsuario.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.lblUsuario.ForeColor = System.Drawing.Color.FromArgb(((120)), ((128)), ((140)));
-            this.lblUsuario.Location = new System.Drawing.Point(30, 30);
+            this.lblUsuario.Location = new System.Drawing.Point(30, 105);
             this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.TabIndex = 5;
+            this.lblUsuario.TabIndex = 6;
             this.lblUsuario.Text = "USUARIO *";
             // 
             // txtUsuario
@@ -160,19 +172,19 @@
             this.txtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtUsuario.MaxLength = 50;
             this.txtUsuario.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.txtUsuario.Location = new System.Drawing.Point(30, 51);
+            this.txtUsuario.Location = new System.Drawing.Point(30, 126);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(300, 28);
-            this.txtUsuario.TabIndex = 6;
+            this.txtUsuario.TabIndex = 7;
             // 
             // lblNombreCompleto
             // 
             this.lblNombreCompleto.AutoSize = true;
             this.lblNombreCompleto.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.lblNombreCompleto.ForeColor = System.Drawing.Color.FromArgb(((120)), ((128)), ((140)));
-            this.lblNombreCompleto.Location = new System.Drawing.Point(360, 30);
+            this.lblNombreCompleto.Location = new System.Drawing.Point(360, 105);
             this.lblNombreCompleto.Name = "lblNombreCompleto";
-            this.lblNombreCompleto.TabIndex = 7;
+            this.lblNombreCompleto.TabIndex = 8;
             this.lblNombreCompleto.Text = "NOMBRE COMPLETO *";
             // 
             // txtNombreCompleto
@@ -180,19 +192,19 @@
             this.txtNombreCompleto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNombreCompleto.MaxLength = 100;
             this.txtNombreCompleto.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.txtNombreCompleto.Location = new System.Drawing.Point(360, 51);
+            this.txtNombreCompleto.Location = new System.Drawing.Point(360, 126);
             this.txtNombreCompleto.Name = "txtNombreCompleto";
             this.txtNombreCompleto.Size = new System.Drawing.Size(300, 28);
-            this.txtNombreCompleto.TabIndex = 8;
+            this.txtNombreCompleto.TabIndex = 9;
             // 
             // lblClave
             // 
             this.lblClave.AutoSize = true;
             this.lblClave.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.lblClave.ForeColor = System.Drawing.Color.FromArgb(((120)), ((128)), ((140)));
-            this.lblClave.Location = new System.Drawing.Point(30, 97);
+            this.lblClave.Location = new System.Drawing.Point(30, 172);
             this.lblClave.Name = "lblClave";
-            this.lblClave.TabIndex = 9;
+            this.lblClave.TabIndex = 10;
             this.lblClave.Text = "CONTRASEÑA * (MÍNIMO 8)";
             // 
             // txtClave
@@ -201,19 +213,19 @@
             this.txtClave.MaxLength = 50;
             this.txtClave.UseSystemPasswordChar = true;
             this.txtClave.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.txtClave.Location = new System.Drawing.Point(30, 118);
+            this.txtClave.Location = new System.Drawing.Point(30, 193);
             this.txtClave.Name = "txtClave";
             this.txtClave.Size = new System.Drawing.Size(300, 28);
-            this.txtClave.TabIndex = 10;
+            this.txtClave.TabIndex = 11;
             // 
             // lblRol
             // 
             this.lblRol.AutoSize = true;
             this.lblRol.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.lblRol.ForeColor = System.Drawing.Color.FromArgb(((120)), ((128)), ((140)));
-            this.lblRol.Location = new System.Drawing.Point(360, 97);
+            this.lblRol.Location = new System.Drawing.Point(360, 172);
             this.lblRol.Name = "lblRol";
-            this.lblRol.TabIndex = 11;
+            this.lblRol.TabIndex = 12;
             this.lblRol.Text = "ROL *";
             // 
             // cmbRol
@@ -222,19 +234,19 @@
             this.cmbRol.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbRol.FormattingEnabled = true;
             this.cmbRol.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.cmbRol.Location = new System.Drawing.Point(360, 118);
+            this.cmbRol.Location = new System.Drawing.Point(360, 193);
             this.cmbRol.Name = "cmbRol";
             this.cmbRol.Size = new System.Drawing.Size(300, 28);
-            this.cmbRol.TabIndex = 12;
+            this.cmbRol.TabIndex = 13;
             // 
             // lblActivo
             // 
             this.lblActivo.AutoSize = true;
             this.lblActivo.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.lblActivo.ForeColor = System.Drawing.Color.FromArgb(((120)), ((128)), ((140)));
-            this.lblActivo.Location = new System.Drawing.Point(30, 164);
+            this.lblActivo.Location = new System.Drawing.Point(30, 239);
             this.lblActivo.Name = "lblActivo";
-            this.lblActivo.TabIndex = 13;
+            this.lblActivo.TabIndex = 14;
             this.lblActivo.Text = "ESTADO";
             // 
             // chkActivo
@@ -243,9 +255,9 @@
             this.chkActivo.Checked = true;
             this.chkActivo.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chkActivo.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.chkActivo.Location = new System.Drawing.Point(30, 187);
+            this.chkActivo.Location = new System.Drawing.Point(30, 262);
             this.chkActivo.Name = "chkActivo";
-            this.chkActivo.TabIndex = 14;
+            this.chkActivo.TabIndex = 15;
             this.chkActivo.Text = "Activo";
             // 
             // btnRegistrar
@@ -257,10 +269,10 @@
             this.btnRegistrar.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.btnRegistrar.ForeColor = System.Drawing.Color.White;
             this.btnRegistrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((33)), ((147)), ((81)));
-            this.btnRegistrar.Location = new System.Drawing.Point(460, 241);
+            this.btnRegistrar.Location = new System.Drawing.Point(460, 316);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(200, 46);
-            this.btnRegistrar.TabIndex = 15;
+            this.btnRegistrar.TabIndex = 16;
             this.btnRegistrar.Text = "✔  Registrar";
             this.btnRegistrar.UseVisualStyleBackColor = false;
             this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
@@ -276,7 +288,7 @@
             this.tpVer.Location = new System.Drawing.Point(4, 44);
             this.tpVer.Name = "tpVer";
             this.tpVer.Size = new System.Drawing.Size(1092, 602);
-            this.tpVer.TabIndex = 16;
+            this.tpVer.TabIndex = 17;
             this.tpVer.Text = "Ver / Actualizar / Eliminar";
             this.tpVer.UseVisualStyleBackColor = false;
             // 
@@ -296,10 +308,11 @@
             this.pnlEditar.Controls.Add(this.btnActualizar);
             this.pnlEditar.Controls.Add(this.btnEliminar);
             this.pnlEditar.BackColor = System.Drawing.Color.White;
+            this.pnlEditar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left)));
             this.pnlEditar.Location = new System.Drawing.Point(20, 20);
             this.pnlEditar.Name = "pnlEditar";
-            this.pnlEditar.Size = new System.Drawing.Size(310, 455);
-            this.pnlEditar.TabIndex = 17;
+            this.pnlEditar.Size = new System.Drawing.Size(310, 562);
+            this.pnlEditar.TabIndex = 18;
             // 
             // lblEditar
             // 
@@ -308,7 +321,7 @@
             this.lblEditar.ForeColor = System.Drawing.Color.FromArgb(((43)), ((48)), ((59)));
             this.lblEditar.Location = new System.Drawing.Point(20, 18);
             this.lblEditar.Name = "lblEditar";
-            this.lblEditar.TabIndex = 18;
+            this.lblEditar.TabIndex = 19;
             this.lblEditar.Text = "Editar seleccionado";
             // 
             // lblUsuarioAct
@@ -318,7 +331,7 @@
             this.lblUsuarioAct.ForeColor = System.Drawing.Color.FromArgb(((120)), ((128)), ((140)));
             this.lblUsuarioAct.Location = new System.Drawing.Point(20, 60);
             this.lblUsuarioAct.Name = "lblUsuarioAct";
-            this.lblUsuarioAct.TabIndex = 19;
+            this.lblUsuarioAct.TabIndex = 20;
             this.lblUsuarioAct.Text = "USUARIO";
             // 
             // txtUsuarioAct
@@ -329,7 +342,7 @@
             this.txtUsuarioAct.Location = new System.Drawing.Point(20, 81);
             this.txtUsuarioAct.Name = "txtUsuarioAct";
             this.txtUsuarioAct.Size = new System.Drawing.Size(270, 28);
-            this.txtUsuarioAct.TabIndex = 20;
+            this.txtUsuarioAct.TabIndex = 21;
             // 
             // lblNombreCompletoAct
             // 
@@ -338,7 +351,7 @@
             this.lblNombreCompletoAct.ForeColor = System.Drawing.Color.FromArgb(((120)), ((128)), ((140)));
             this.lblNombreCompletoAct.Location = new System.Drawing.Point(20, 125);
             this.lblNombreCompletoAct.Name = "lblNombreCompletoAct";
-            this.lblNombreCompletoAct.TabIndex = 21;
+            this.lblNombreCompletoAct.TabIndex = 22;
             this.lblNombreCompletoAct.Text = "NOMBRE COMPLETO";
             // 
             // txtNombreCompletoAct
@@ -349,7 +362,7 @@
             this.txtNombreCompletoAct.Location = new System.Drawing.Point(20, 146);
             this.txtNombreCompletoAct.Name = "txtNombreCompletoAct";
             this.txtNombreCompletoAct.Size = new System.Drawing.Size(270, 28);
-            this.txtNombreCompletoAct.TabIndex = 22;
+            this.txtNombreCompletoAct.TabIndex = 23;
             // 
             // lblClaveAct
             // 
@@ -358,7 +371,7 @@
             this.lblClaveAct.ForeColor = System.Drawing.Color.FromArgb(((120)), ((128)), ((140)));
             this.lblClaveAct.Location = new System.Drawing.Point(20, 190);
             this.lblClaveAct.Name = "lblClaveAct";
-            this.lblClaveAct.TabIndex = 23;
+            this.lblClaveAct.TabIndex = 24;
             this.lblClaveAct.Text = "NUEVA CONTRASEÑA (OPCIONAL)";
             // 
             // txtClaveAct
@@ -370,7 +383,7 @@
             this.txtClaveAct.Location = new System.Drawing.Point(20, 211);
             this.txtClaveAct.Name = "txtClaveAct";
             this.txtClaveAct.Size = new System.Drawing.Size(270, 28);
-            this.txtClaveAct.TabIndex = 24;
+            this.txtClaveAct.TabIndex = 25;
             // 
             // lblRolAct
             // 
@@ -379,7 +392,7 @@
             this.lblRolAct.ForeColor = System.Drawing.Color.FromArgb(((120)), ((128)), ((140)));
             this.lblRolAct.Location = new System.Drawing.Point(20, 255);
             this.lblRolAct.Name = "lblRolAct";
-            this.lblRolAct.TabIndex = 25;
+            this.lblRolAct.TabIndex = 26;
             this.lblRolAct.Text = "ROL";
             // 
             // cmbRolAct
@@ -391,7 +404,7 @@
             this.cmbRolAct.Location = new System.Drawing.Point(20, 276);
             this.cmbRolAct.Name = "cmbRolAct";
             this.cmbRolAct.Size = new System.Drawing.Size(270, 28);
-            this.cmbRolAct.TabIndex = 26;
+            this.cmbRolAct.TabIndex = 27;
             // 
             // lblActivoAct
             // 
@@ -400,7 +413,7 @@
             this.lblActivoAct.ForeColor = System.Drawing.Color.FromArgb(((120)), ((128)), ((140)));
             this.lblActivoAct.Location = new System.Drawing.Point(20, 320);
             this.lblActivoAct.Name = "lblActivoAct";
-            this.lblActivoAct.TabIndex = 27;
+            this.lblActivoAct.TabIndex = 28;
             this.lblActivoAct.Text = "ESTADO";
             // 
             // chkActivoAct
@@ -411,7 +424,7 @@
             this.chkActivoAct.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.chkActivoAct.Location = new System.Drawing.Point(20, 343);
             this.chkActivoAct.Name = "chkActivoAct";
-            this.chkActivoAct.TabIndex = 28;
+            this.chkActivoAct.TabIndex = 29;
             this.chkActivoAct.Text = "Activo";
             // 
             // btnActualizar
@@ -426,7 +439,7 @@
             this.btnActualizar.Location = new System.Drawing.Point(20, 391);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(130, 42);
-            this.btnActualizar.TabIndex = 29;
+            this.btnActualizar.TabIndex = 30;
             this.btnActualizar.Text = "Actualizar";
             this.btnActualizar.UseVisualStyleBackColor = false;
             this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
@@ -443,7 +456,7 @@
             this.btnEliminar.Location = new System.Drawing.Point(160, 391);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(130, 42);
-            this.btnEliminar.TabIndex = 30;
+            this.btnEliminar.TabIndex = 31;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = false;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
@@ -455,7 +468,7 @@
             this.lblLista.ForeColor = System.Drawing.Color.FromArgb(((43)), ((48)), ((59)));
             this.lblLista.Location = new System.Drawing.Point(350, 24);
             this.lblLista.Name = "lblLista";
-            this.lblLista.TabIndex = 31;
+            this.lblLista.TabIndex = 32;
             this.lblLista.Text = "Lista de usuarios";
             // 
             // dgvUsuarios
@@ -501,7 +514,7 @@
             this.dgvUsuarios.Location = new System.Drawing.Point(350, 64);
             this.dgvUsuarios.Name = "dgvUsuarios";
             this.dgvUsuarios.Size = new System.Drawing.Size(722, 518);
-            this.dgvUsuarios.TabIndex = 32;
+            this.dgvUsuarios.TabIndex = 33;
             this.dgvUsuarios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUsuarios_CellClick);
             // 
             // errorProvider1
@@ -523,11 +536,13 @@
             this.Load += new System.EventHandler(this.frmUsuarios_Load);
             this.pnlEditar.ResumeLayout(false);
             this.tpVer.ResumeLayout(false);
+            this.pnlLineaRegistrar.ResumeLayout(false);
             this.pnlRegistrar.ResumeLayout(false);
             this.tpRegistrar.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
             this.tpRegistrar.PerformLayout();
             this.pnlRegistrar.PerformLayout();
+            this.pnlLineaRegistrar.PerformLayout();
             this.tpVer.PerformLayout();
             this.pnlEditar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).EndInit();
@@ -541,9 +556,10 @@
 
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tpRegistrar;
+        private System.Windows.Forms.Panel pnlRegistrar;
         private System.Windows.Forms.Label lblTituloRegistrar;
         private System.Windows.Forms.Label lblSubRegistrar;
-        private System.Windows.Forms.Panel pnlRegistrar;
+        private System.Windows.Forms.Panel pnlLineaRegistrar;
         private System.Windows.Forms.Label lblUsuario;
         private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.Label lblNombreCompleto;

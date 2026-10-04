@@ -34,9 +34,10 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tpRegistrar = new System.Windows.Forms.TabPage();
+            this.pnlRegistrar = new System.Windows.Forms.Panel();
             this.lblTituloRegistrar = new System.Windows.Forms.Label();
             this.lblSubRegistrar = new System.Windows.Forms.Label();
-            this.pnlRegistrar = new System.Windows.Forms.Panel();
+            this.pnlLineaRegistrar = new System.Windows.Forms.Panel();
             this.lblPaciente = new System.Windows.Forms.Label();
             this.cmbPaciente = new System.Windows.Forms.ComboBox();
             this.lblMedico = new System.Windows.Forms.Label();
@@ -62,6 +63,7 @@
             this.tabControl1.SuspendLayout();
             this.tpRegistrar.SuspendLayout();
             this.pnlRegistrar.SuspendLayout();
+            this.pnlLineaRegistrar.SuspendLayout();
             this.tpVer.SuspendLayout();
             this.pnlEditar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHistorial)).BeginInit();
@@ -86,8 +88,6 @@
             // 
             // tpRegistrar
             // 
-            this.tpRegistrar.Controls.Add(this.lblTituloRegistrar);
-            this.tpRegistrar.Controls.Add(this.lblSubRegistrar);
             this.tpRegistrar.Controls.Add(this.pnlRegistrar);
             this.tpRegistrar.BackColor = System.Drawing.Color.FromArgb(((245)), ((247)), ((250)));
             this.tpRegistrar.Font = new System.Drawing.Font("Segoe UI", 10F);
@@ -99,28 +99,11 @@
             this.tpRegistrar.Text = "Registrar";
             this.tpRegistrar.UseVisualStyleBackColor = false;
             // 
-            // lblTituloRegistrar
-            // 
-            this.lblTituloRegistrar.AutoSize = true;
-            this.lblTituloRegistrar.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
-            this.lblTituloRegistrar.ForeColor = System.Drawing.Color.FromArgb(((43)), ((48)), ((59)));
-            this.lblTituloRegistrar.Location = new System.Drawing.Point(30, 18);
-            this.lblTituloRegistrar.Name = "lblTituloRegistrar";
-            this.lblTituloRegistrar.TabIndex = 2;
-            this.lblTituloRegistrar.Text = "Registrar consulta";
-            // 
-            // lblSubRegistrar
-            // 
-            this.lblSubRegistrar.AutoSize = true;
-            this.lblSubRegistrar.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.lblSubRegistrar.ForeColor = System.Drawing.Color.FromArgb(((120)), ((128)), ((140)));
-            this.lblSubRegistrar.Location = new System.Drawing.Point(32, 58);
-            this.lblSubRegistrar.Name = "lblSubRegistrar";
-            this.lblSubRegistrar.TabIndex = 3;
-            this.lblSubRegistrar.Text = "Complete los datos y presione «Registrar». Los campos con * son obligatorios.";
-            // 
             // pnlRegistrar
             // 
+            this.pnlRegistrar.Controls.Add(this.lblTituloRegistrar);
+            this.pnlRegistrar.Controls.Add(this.lblSubRegistrar);
+            this.pnlRegistrar.Controls.Add(this.pnlLineaRegistrar);
             this.pnlRegistrar.Controls.Add(this.lblPaciente);
             this.pnlRegistrar.Controls.Add(this.cmbPaciente);
             this.pnlRegistrar.Controls.Add(this.lblMedico);
@@ -131,19 +114,48 @@
             this.pnlRegistrar.Controls.Add(this.txtTratamiento);
             this.pnlRegistrar.Controls.Add(this.btnRegistrar);
             this.pnlRegistrar.BackColor = System.Drawing.Color.White;
-            this.pnlRegistrar.Location = new System.Drawing.Point(30, 95);
+            this.pnlRegistrar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pnlRegistrar.Location = new System.Drawing.Point(201, 53);
             this.pnlRegistrar.Name = "pnlRegistrar";
-            this.pnlRegistrar.Size = new System.Drawing.Size(690, 421);
-            this.pnlRegistrar.TabIndex = 4;
+            this.pnlRegistrar.Size = new System.Drawing.Size(690, 496);
+            this.pnlRegistrar.TabIndex = 2;
+            // 
+            // lblTituloRegistrar
+            // 
+            this.lblTituloRegistrar.AutoSize = true;
+            this.lblTituloRegistrar.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
+            this.lblTituloRegistrar.ForeColor = System.Drawing.Color.FromArgb(((43)), ((48)), ((59)));
+            this.lblTituloRegistrar.Location = new System.Drawing.Point(27, 22);
+            this.lblTituloRegistrar.Name = "lblTituloRegistrar";
+            this.lblTituloRegistrar.TabIndex = 3;
+            this.lblTituloRegistrar.Text = "Registrar consulta";
+            // 
+            // lblSubRegistrar
+            // 
+            this.lblSubRegistrar.AutoSize = true;
+            this.lblSubRegistrar.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.lblSubRegistrar.ForeColor = System.Drawing.Color.FromArgb(((120)), ((128)), ((140)));
+            this.lblSubRegistrar.Location = new System.Drawing.Point(30, 62);
+            this.lblSubRegistrar.Name = "lblSubRegistrar";
+            this.lblSubRegistrar.TabIndex = 4;
+            this.lblSubRegistrar.Text = "Los campos con * son obligatorios.";
+            // 
+            // pnlLineaRegistrar
+            // 
+            this.pnlLineaRegistrar.BackColor = System.Drawing.Color.FromArgb(((41)), ((182)), ((182)));
+            this.pnlLineaRegistrar.Location = new System.Drawing.Point(30, 88);
+            this.pnlLineaRegistrar.Name = "pnlLineaRegistrar";
+            this.pnlLineaRegistrar.Size = new System.Drawing.Size(630, 2);
+            this.pnlLineaRegistrar.TabIndex = 5;
             // 
             // lblPaciente
             // 
             this.lblPaciente.AutoSize = true;
             this.lblPaciente.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.lblPaciente.ForeColor = System.Drawing.Color.FromArgb(((120)), ((128)), ((140)));
-            this.lblPaciente.Location = new System.Drawing.Point(30, 30);
+            this.lblPaciente.Location = new System.Drawing.Point(30, 105);
             this.lblPaciente.Name = "lblPaciente";
-            this.lblPaciente.TabIndex = 5;
+            this.lblPaciente.TabIndex = 6;
             this.lblPaciente.Text = "PACIENTE *";
             // 
             // cmbPaciente
@@ -152,19 +164,19 @@
             this.cmbPaciente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbPaciente.FormattingEnabled = true;
             this.cmbPaciente.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.cmbPaciente.Location = new System.Drawing.Point(30, 51);
+            this.cmbPaciente.Location = new System.Drawing.Point(30, 126);
             this.cmbPaciente.Name = "cmbPaciente";
             this.cmbPaciente.Size = new System.Drawing.Size(300, 28);
-            this.cmbPaciente.TabIndex = 6;
+            this.cmbPaciente.TabIndex = 7;
             // 
             // lblMedico
             // 
             this.lblMedico.AutoSize = true;
             this.lblMedico.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.lblMedico.ForeColor = System.Drawing.Color.FromArgb(((120)), ((128)), ((140)));
-            this.lblMedico.Location = new System.Drawing.Point(360, 30);
+            this.lblMedico.Location = new System.Drawing.Point(360, 105);
             this.lblMedico.Name = "lblMedico";
-            this.lblMedico.TabIndex = 7;
+            this.lblMedico.TabIndex = 8;
             this.lblMedico.Text = "MÉDICO *";
             // 
             // cmbMedico
@@ -173,19 +185,19 @@
             this.cmbMedico.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbMedico.FormattingEnabled = true;
             this.cmbMedico.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.cmbMedico.Location = new System.Drawing.Point(360, 51);
+            this.cmbMedico.Location = new System.Drawing.Point(360, 126);
             this.cmbMedico.Name = "cmbMedico";
             this.cmbMedico.Size = new System.Drawing.Size(300, 28);
-            this.cmbMedico.TabIndex = 8;
+            this.cmbMedico.TabIndex = 9;
             // 
             // lblDiagnostico
             // 
             this.lblDiagnostico.AutoSize = true;
             this.lblDiagnostico.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.lblDiagnostico.ForeColor = System.Drawing.Color.FromArgb(((120)), ((128)), ((140)));
-            this.lblDiagnostico.Location = new System.Drawing.Point(30, 97);
+            this.lblDiagnostico.Location = new System.Drawing.Point(30, 172);
             this.lblDiagnostico.Name = "lblDiagnostico";
-            this.lblDiagnostico.TabIndex = 9;
+            this.lblDiagnostico.TabIndex = 10;
             this.lblDiagnostico.Text = "DIAGNÓSTICO *";
             // 
             // txtDiagnostico
@@ -194,19 +206,19 @@
             this.txtDiagnostico.MaxLength = 300;
             this.txtDiagnostico.Multiline = true;
             this.txtDiagnostico.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.txtDiagnostico.Location = new System.Drawing.Point(30, 118);
+            this.txtDiagnostico.Location = new System.Drawing.Point(30, 193);
             this.txtDiagnostico.Name = "txtDiagnostico";
             this.txtDiagnostico.Size = new System.Drawing.Size(630, 80);
-            this.txtDiagnostico.TabIndex = 10;
+            this.txtDiagnostico.TabIndex = 11;
             // 
             // lblTratamiento
             // 
             this.lblTratamiento.AutoSize = true;
             this.lblTratamiento.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.lblTratamiento.ForeColor = System.Drawing.Color.FromArgb(((120)), ((128)), ((140)));
-            this.lblTratamiento.Location = new System.Drawing.Point(30, 216);
+            this.lblTratamiento.Location = new System.Drawing.Point(30, 291);
             this.lblTratamiento.Name = "lblTratamiento";
-            this.lblTratamiento.TabIndex = 11;
+            this.lblTratamiento.TabIndex = 12;
             this.lblTratamiento.Text = "TRATAMIENTO";
             // 
             // txtTratamiento
@@ -215,10 +227,10 @@
             this.txtTratamiento.MaxLength = 300;
             this.txtTratamiento.Multiline = true;
             this.txtTratamiento.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.txtTratamiento.Location = new System.Drawing.Point(30, 237);
+            this.txtTratamiento.Location = new System.Drawing.Point(30, 312);
             this.txtTratamiento.Name = "txtTratamiento";
             this.txtTratamiento.Size = new System.Drawing.Size(630, 80);
-            this.txtTratamiento.TabIndex = 12;
+            this.txtTratamiento.TabIndex = 13;
             // 
             // btnRegistrar
             // 
@@ -229,10 +241,10 @@
             this.btnRegistrar.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.btnRegistrar.ForeColor = System.Drawing.Color.White;
             this.btnRegistrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((33)), ((147)), ((81)));
-            this.btnRegistrar.Location = new System.Drawing.Point(460, 345);
+            this.btnRegistrar.Location = new System.Drawing.Point(460, 420);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(200, 46);
-            this.btnRegistrar.TabIndex = 13;
+            this.btnRegistrar.TabIndex = 14;
             this.btnRegistrar.Text = "✔  Registrar";
             this.btnRegistrar.UseVisualStyleBackColor = false;
             this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
@@ -249,7 +261,7 @@
             this.tpVer.Location = new System.Drawing.Point(4, 44);
             this.tpVer.Name = "tpVer";
             this.tpVer.Size = new System.Drawing.Size(1092, 602);
-            this.tpVer.TabIndex = 14;
+            this.tpVer.TabIndex = 15;
             this.tpVer.Text = "Ver / Actualizar / Eliminar";
             this.tpVer.UseVisualStyleBackColor = false;
             // 
@@ -263,10 +275,11 @@
             this.pnlEditar.Controls.Add(this.btnActualizar);
             this.pnlEditar.Controls.Add(this.btnEliminar);
             this.pnlEditar.BackColor = System.Drawing.Color.White;
+            this.pnlEditar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left)));
             this.pnlEditar.Location = new System.Drawing.Point(20, 20);
             this.pnlEditar.Name = "pnlEditar";
-            this.pnlEditar.Size = new System.Drawing.Size(310, 424);
-            this.pnlEditar.TabIndex = 15;
+            this.pnlEditar.Size = new System.Drawing.Size(310, 562);
+            this.pnlEditar.TabIndex = 16;
             // 
             // lblEditar
             // 
@@ -275,7 +288,7 @@
             this.lblEditar.ForeColor = System.Drawing.Color.FromArgb(((43)), ((48)), ((59)));
             this.lblEditar.Location = new System.Drawing.Point(20, 18);
             this.lblEditar.Name = "lblEditar";
-            this.lblEditar.TabIndex = 16;
+            this.lblEditar.TabIndex = 17;
             this.lblEditar.Text = "Editar seleccionado";
             // 
             // lblDiagnosticoAct
@@ -285,7 +298,7 @@
             this.lblDiagnosticoAct.ForeColor = System.Drawing.Color.FromArgb(((120)), ((128)), ((140)));
             this.lblDiagnosticoAct.Location = new System.Drawing.Point(20, 60);
             this.lblDiagnosticoAct.Name = "lblDiagnosticoAct";
-            this.lblDiagnosticoAct.TabIndex = 17;
+            this.lblDiagnosticoAct.TabIndex = 18;
             this.lblDiagnosticoAct.Text = "DIAGNÓSTICO";
             // 
             // txtDiagnosticoAct
@@ -297,7 +310,7 @@
             this.txtDiagnosticoAct.Location = new System.Drawing.Point(20, 81);
             this.txtDiagnosticoAct.Name = "txtDiagnosticoAct";
             this.txtDiagnosticoAct.Size = new System.Drawing.Size(270, 110);
-            this.txtDiagnosticoAct.TabIndex = 18;
+            this.txtDiagnosticoAct.TabIndex = 19;
             // 
             // lblTratamientoAct
             // 
@@ -306,7 +319,7 @@
             this.lblTratamientoAct.ForeColor = System.Drawing.Color.FromArgb(((120)), ((128)), ((140)));
             this.lblTratamientoAct.Location = new System.Drawing.Point(20, 207);
             this.lblTratamientoAct.Name = "lblTratamientoAct";
-            this.lblTratamientoAct.TabIndex = 19;
+            this.lblTratamientoAct.TabIndex = 20;
             this.lblTratamientoAct.Text = "TRATAMIENTO";
             // 
             // txtTratamientoAct
@@ -318,7 +331,7 @@
             this.txtTratamientoAct.Location = new System.Drawing.Point(20, 228);
             this.txtTratamientoAct.Name = "txtTratamientoAct";
             this.txtTratamientoAct.Size = new System.Drawing.Size(270, 110);
-            this.txtTratamientoAct.TabIndex = 20;
+            this.txtTratamientoAct.TabIndex = 21;
             // 
             // btnActualizar
             // 
@@ -332,7 +345,7 @@
             this.btnActualizar.Location = new System.Drawing.Point(20, 360);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(130, 42);
-            this.btnActualizar.TabIndex = 21;
+            this.btnActualizar.TabIndex = 22;
             this.btnActualizar.Text = "Actualizar";
             this.btnActualizar.UseVisualStyleBackColor = false;
             this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
@@ -349,7 +362,7 @@
             this.btnEliminar.Location = new System.Drawing.Point(160, 360);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(130, 42);
-            this.btnEliminar.TabIndex = 22;
+            this.btnEliminar.TabIndex = 23;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = false;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
@@ -361,7 +374,7 @@
             this.lblPacienteVer.ForeColor = System.Drawing.Color.FromArgb(((43)), ((48)), ((59)));
             this.lblPacienteVer.Location = new System.Drawing.Point(350, 24);
             this.lblPacienteVer.Name = "lblPacienteVer";
-            this.lblPacienteVer.TabIndex = 23;
+            this.lblPacienteVer.TabIndex = 24;
             this.lblPacienteVer.Text = "Historial del paciente:";
             // 
             // cmbPacienteVer
@@ -373,7 +386,7 @@
             this.cmbPacienteVer.Location = new System.Drawing.Point(545, 21);
             this.cmbPacienteVer.Name = "cmbPacienteVer";
             this.cmbPacienteVer.Size = new System.Drawing.Size(300, 28);
-            this.cmbPacienteVer.TabIndex = 24;
+            this.cmbPacienteVer.TabIndex = 25;
             this.cmbPacienteVer.SelectedIndexChanged += new System.EventHandler(this.cmbPacienteVer_SelectedIndexChanged);
             // 
             // dgvHistorial
@@ -419,7 +432,7 @@
             this.dgvHistorial.Location = new System.Drawing.Point(350, 64);
             this.dgvHistorial.Name = "dgvHistorial";
             this.dgvHistorial.Size = new System.Drawing.Size(722, 518);
-            this.dgvHistorial.TabIndex = 25;
+            this.dgvHistorial.TabIndex = 26;
             this.dgvHistorial.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHistorial_CellClick);
             // 
             // errorProvider1
@@ -441,11 +454,13 @@
             this.Load += new System.EventHandler(this.frmHistorial_Load);
             this.pnlEditar.ResumeLayout(false);
             this.tpVer.ResumeLayout(false);
+            this.pnlLineaRegistrar.ResumeLayout(false);
             this.pnlRegistrar.ResumeLayout(false);
             this.tpRegistrar.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
             this.tpRegistrar.PerformLayout();
             this.pnlRegistrar.PerformLayout();
+            this.pnlLineaRegistrar.PerformLayout();
             this.tpVer.PerformLayout();
             this.pnlEditar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHistorial)).EndInit();
@@ -459,9 +474,10 @@
 
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tpRegistrar;
+        private System.Windows.Forms.Panel pnlRegistrar;
         private System.Windows.Forms.Label lblTituloRegistrar;
         private System.Windows.Forms.Label lblSubRegistrar;
-        private System.Windows.Forms.Panel pnlRegistrar;
+        private System.Windows.Forms.Panel pnlLineaRegistrar;
         private System.Windows.Forms.Label lblPaciente;
         private System.Windows.Forms.ComboBox cmbPaciente;
         private System.Windows.Forms.Label lblMedico;
