@@ -34,9 +34,6 @@
             this.lblNombreSistema = new System.Windows.Forms.Label();
             this.lblDescripcion = new System.Windows.Forms.Label();
             this.pnlLineaLogin = new System.Windows.Forms.Panel();
-            this.lblPunto1 = new System.Windows.Forms.Label();
-            this.lblPunto2 = new System.Windows.Forms.Label();
-            this.lblPunto3 = new System.Windows.Forms.Label();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.lblSubtitulo = new System.Windows.Forms.Label();
             this.lblUsuario = new System.Windows.Forms.Label();
@@ -57,9 +54,6 @@
             this.pnlLateral.Controls.Add(this.lblNombreSistema);
             this.pnlLateral.Controls.Add(this.lblDescripcion);
             this.pnlLateral.Controls.Add(this.pnlLineaLogin);
-            this.pnlLateral.Controls.Add(this.lblPunto1);
-            this.pnlLateral.Controls.Add(this.lblPunto2);
-            this.pnlLateral.Controls.Add(this.lblPunto3);
             this.pnlLateral.BackColor = System.Drawing.Color.FromArgb(((37)), ((99)), ((235)));
             this.pnlLateral.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlLateral.Name = "pnlLateral";
@@ -105,36 +99,6 @@
             this.pnlLineaLogin.Size = new System.Drawing.Size(50, 3);
             this.pnlLineaLogin.TabIndex = 4;
             // 
-            // lblPunto1
-            // 
-            this.lblPunto1.AutoSize = true;
-            this.lblPunto1.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            this.lblPunto1.ForeColor = System.Drawing.Color.White;
-            this.lblPunto1.Location = new System.Drawing.Point(54, 295);
-            this.lblPunto1.Name = "lblPunto1";
-            this.lblPunto1.TabIndex = 5;
-            this.lblPunto1.Text = "✔  Registro de pacientes";
-            // 
-            // lblPunto2
-            // 
-            this.lblPunto2.AutoSize = true;
-            this.lblPunto2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            this.lblPunto2.ForeColor = System.Drawing.Color.White;
-            this.lblPunto2.Location = new System.Drawing.Point(54, 327);
-            this.lblPunto2.Name = "lblPunto2";
-            this.lblPunto2.TabIndex = 6;
-            this.lblPunto2.Text = "✔  Agenda de citas sin choques de horario";
-            // 
-            // lblPunto3
-            // 
-            this.lblPunto3.AutoSize = true;
-            this.lblPunto3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            this.lblPunto3.ForeColor = System.Drawing.Color.White;
-            this.lblPunto3.Location = new System.Drawing.Point(54, 359);
-            this.lblPunto3.Name = "lblPunto3";
-            this.lblPunto3.TabIndex = 7;
-            this.lblPunto3.Text = "✔  Historial clínico de cada paciente";
-            // 
             // lblTitulo
             // 
             this.lblTitulo.AutoSize = true;
@@ -142,7 +106,7 @@
             this.lblTitulo.ForeColor = System.Drawing.Color.FromArgb(((15)), ((23)), ((42)));
             this.lblTitulo.Location = new System.Drawing.Point(457, 90);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.TabIndex = 8;
+            this.lblTitulo.TabIndex = 5;
             this.lblTitulo.Text = "Bienvenido";
             // 
             // lblSubtitulo
@@ -152,7 +116,7 @@
             this.lblSubtitulo.ForeColor = System.Drawing.Color.FromArgb(((100)), ((116)), ((139)));
             this.lblSubtitulo.Location = new System.Drawing.Point(460, 140);
             this.lblSubtitulo.Name = "lblSubtitulo";
-            this.lblSubtitulo.TabIndex = 9;
+            this.lblSubtitulo.TabIndex = 6;
             this.lblSubtitulo.Text = "Inicia sesión para continuar";
             // 
             // lblUsuario
@@ -162,7 +126,7 @@
             this.lblUsuario.ForeColor = System.Drawing.Color.FromArgb(((100)), ((116)), ((139)));
             this.lblUsuario.Location = new System.Drawing.Point(460, 200);
             this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.TabIndex = 10;
+            this.lblUsuario.TabIndex = 7;
             this.lblUsuario.Text = "USUARIO";
             // 
             // txtUsuario
@@ -173,7 +137,7 @@
             this.txtUsuario.Location = new System.Drawing.Point(460, 222);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(380, 34);
-            this.txtUsuario.TabIndex = 11;
+            this.txtUsuario.TabIndex = 8;
             // 
             // lblClave
             // 
@@ -182,7 +146,7 @@
             this.lblClave.ForeColor = System.Drawing.Color.FromArgb(((100)), ((116)), ((139)));
             this.lblClave.Location = new System.Drawing.Point(460, 278);
             this.lblClave.Name = "lblClave";
-            this.lblClave.TabIndex = 12;
+            this.lblClave.TabIndex = 9;
             this.lblClave.Text = "CONTRASEÑA";
             // 
             // txtClave
@@ -194,7 +158,7 @@
             this.txtClave.Location = new System.Drawing.Point(460, 300);
             this.txtClave.Name = "txtClave";
             this.txtClave.Size = new System.Drawing.Size(380, 34);
-            this.txtClave.TabIndex = 13;
+            this.txtClave.TabIndex = 10;
             // 
             // btnIngresar
             // 
@@ -208,7 +172,7 @@
             this.btnIngresar.Location = new System.Drawing.Point(460, 365);
             this.btnIngresar.Name = "btnIngresar";
             this.btnIngresar.Size = new System.Drawing.Size(380, 48);
-            this.btnIngresar.TabIndex = 14;
+            this.btnIngresar.TabIndex = 11;
             this.btnIngresar.Text = "Iniciar sesión";
             this.btnIngresar.UseVisualStyleBackColor = false;
             this.btnIngresar.Click += new System.EventHandler(this.btnIngresar_Click);
@@ -226,7 +190,7 @@
             this.btnSalir.Location = new System.Drawing.Point(460, 423);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(380, 40);
-            this.btnSalir.TabIndex = 15;
+            this.btnSalir.TabIndex = 12;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = false;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
@@ -277,9 +241,6 @@
         private System.Windows.Forms.Label lblNombreSistema;
         private System.Windows.Forms.Label lblDescripcion;
         private System.Windows.Forms.Panel pnlLineaLogin;
-        private System.Windows.Forms.Label lblPunto1;
-        private System.Windows.Forms.Label lblPunto2;
-        private System.Windows.Forms.Label lblPunto3;
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.Label lblSubtitulo;
         private System.Windows.Forms.Label lblUsuario;

@@ -24,4 +24,40 @@
     <Reference Include="System.Data" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Compile Update="Dashboard\frmDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Dashboard\frmInicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Gestion\frmBitacora.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Gestion\frmCitas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Gestion\frmEspecialidades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Gestion\frmHistorial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Gestion\frmMedicos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Gestion\frmPacientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Gestion\frmPermisos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Gestion\frmUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Login\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+
 </Project>

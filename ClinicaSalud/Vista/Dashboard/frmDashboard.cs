@@ -1,6 +1,7 @@
 ﻿using Modelos.Entidades;
 using System;
 using System.Drawing;
+using System.Globalization;
 using System.Windows.Forms;
 using Vista.Gestion;
 
@@ -20,7 +21,7 @@ namespace Vista.Dashboard
         {
             lblNombreUsuario.Text = Sesion.NombreUsuario;
             lblRolUsuario.Text = Sesion.Rol;
-            lblFecha.Text = DateTime.Now.ToString("dddd, dd 'de' MMMM 'de' yyyy");
+            lblFecha.Text = DateTime.Now.ToString("dddd, dd 'de' MMMM 'de' yyyy", new CultureInfo("es-ES"));
 
             btnPacientes.Visible = Sesion.TienePermiso("Pacientes");
             btnMedicos.Visible = Sesion.TienePermiso("Medicos");
