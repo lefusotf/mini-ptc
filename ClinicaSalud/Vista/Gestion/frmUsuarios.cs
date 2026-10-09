@@ -17,6 +17,7 @@ namespace Vista.Gestion
 
         private void frmUsuarios_Load(object sender, EventArgs e)
         {
+            txtNombreCompleto.KeyPress += soloLetras_KeyPress;
             cmbRol.DataSource = Usuario.cargarRoles();
             cmbRol.DisplayMember = "nombreRol";
             cmbRol.ValueMember = "idRol";
@@ -42,6 +43,11 @@ namespace Vista.Gestion
             if (string.IsNullOrWhiteSpace(txtNombreCompleto.Text))
             {
                 errorProvider1.SetError(txtNombreCompleto, "Ingrese el nombre");
+                valido = false;
+            }
+            else if (!esSoloLetras(txtNombreCompleto.Text))
+            {
+                errorProvider1.SetError(txtNombreCompleto, "Solo se permiten letras");
                 valido = false;
             }
             if ((esNuevo || txtClave.Text.Length > 0) && txtClave.Text.Length < 8)
@@ -156,6 +162,22 @@ namespace Vista.Gestion
             cmbRol.Text = fila.Cells["Rol"].Value.ToString();
             chkActivo.Checked = Convert.ToBoolean(fila.Cells["Activo"].Value);
             txtClave.Clear();
+        }
+
+        private void soloLetras_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && e.KeyChar != ' ')
+                e.Handled = true;
+        }
+
+        private bool esSoloLetras(string texto)
+        {
+            foreach (char letra in texto)
+            {
+                if (!char.IsLetter(letra) && letra != ' ')
+                    return false;
+            }
+            return true;
         }
     }
 }

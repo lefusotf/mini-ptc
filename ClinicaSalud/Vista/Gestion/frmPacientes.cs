@@ -17,6 +17,7 @@ namespace Vista.Gestion
 
         private void frmPacientes_Load(object sender, EventArgs e)
         {
+            txtNombre.KeyPress += soloLetras_KeyPress;
             dtpFechaNacimiento.MaxDate = DateTime.Today;
             cargarDatagridPacientes();
             limpiar();
@@ -37,6 +38,11 @@ namespace Vista.Gestion
                 errorProvider1.SetError(txtNombre, "Ingrese el nombre");
                 valido = false;
             }
+            else if (!esSoloLetras(txtNombre.Text))
+            {
+                errorProvider1.SetError(txtNombre, "Solo se permiten letras");
+                valido = false;
+            }
             if (cmbGenero.SelectedIndex == -1)
             {
                 errorProvider1.SetError(cmbGenero, "Seleccione el género");
@@ -47,6 +53,17 @@ namespace Vista.Gestion
                 errorProvider1.SetError(mskTelefono, "Teléfono incompleto");
                 valido = false;
             }
+
+            int edad = DateTime.Today.Year - dtpFechaNacimiento.Value.Year;
+            if (dtpFechaNacimiento.Value.Date > DateTime.Today.AddYears(-edad)) edad--;
+
+            if (edad < 18 && mskDui.MaskCompleted)
+            {
+                errorProvider1.SetError(mskDui, "Los menores de edad no tienen DUI");
+                MessageBox.Show("Los menores de edad no pueden tener DUI. Deje el campo vacío.", "DUI no permitido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+
             if (!valido)
                 MessageBox.Show("Complete los campos marcados", "Campos requeridos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             return valido;
@@ -147,6 +164,22 @@ namespace Vista.Gestion
             cmbGenero.Text = fila.Cells["Genero"].Value.ToString();
             mskTelefono.Text = fila.Cells["Telefono"].Value.ToString();
             txtDireccion.Text = fila.Cells["Direccion"].Value.ToString();
+        }
+
+        private void soloLetras_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && e.KeyChar != ' ')
+                e.Handled = true;
+        }
+
+        private bool esSoloLetras(string texto)
+        {
+            foreach (char letra in texto)
+            {
+                if (!char.IsLetter(letra) && letra != ' ')
+                    return false;
+            }
+            return true;
         }
     }
 }

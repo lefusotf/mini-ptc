@@ -17,6 +17,7 @@ namespace Vista.Gestion
 
         private void frmMedicos_Load(object sender, EventArgs e)
         {
+            txtNombre.KeyPress += soloLetras_KeyPress;
             cmbEspecialidad.DataSource = Especialidad.cargarCombo();
             cmbEspecialidad.DisplayMember = "nombreEspecialidad";
             cmbEspecialidad.ValueMember = "idEspecialidad";
@@ -42,6 +43,11 @@ namespace Vista.Gestion
             if (string.IsNullOrWhiteSpace(txtNombre.Text))
             {
                 errorProvider1.SetError(txtNombre, "Ingrese el nombre");
+                valido = false;
+            }
+            else if (!esSoloLetras(txtNombre.Text))
+            {
+                errorProvider1.SetError(txtNombre, "Solo se permiten letras");
                 valido = false;
             }
             if (!mskTelefono.MaskCompleted)
@@ -157,6 +163,22 @@ namespace Vista.Gestion
             cmbEspecialidad.Text = fila.Cells["Especialidad"].Value.ToString();
             string usuario = fila.Cells["Usuario"].Value.ToString();
             cmbUsuario.Text = usuario == "" ? "(Sin usuario)" : usuario;
+        }
+
+        private void soloLetras_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && e.KeyChar != ' ')
+                e.Handled = true;
+        }
+
+        private bool esSoloLetras(string texto)
+        {
+            foreach (char letra in texto)
+            {
+                if (!char.IsLetter(letra) && letra != ' ')
+                    return false;
+            }
+            return true;
         }
     }
 }
