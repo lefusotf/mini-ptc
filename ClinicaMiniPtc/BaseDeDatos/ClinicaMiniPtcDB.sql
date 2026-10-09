@@ -1,7 +1,7 @@
-﻿CREATE DATABASE ClinicaSaludDB;
+﻿CREATE DATABASE ClinicaMiniPtcDB;
 GO
 
-USE ClinicaSaludDB;
+USE ClinicaMiniPtcDB;
 GO
 
 CREATE TABLE Rol (

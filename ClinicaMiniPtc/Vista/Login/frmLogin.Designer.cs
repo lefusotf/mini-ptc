@@ -78,7 +78,7 @@
             this.lblNombreSistema.Location = new System.Drawing.Point(50, 140);
             this.lblNombreSistema.Name = "lblNombreSistema";
             this.lblNombreSistema.TabIndex = 2;
-            this.lblNombreSistema.Text = "Clínica Salud";
+            this.lblNombreSistema.Text = "Clínica MiniPtc";
             // 
             // lblDescripcion
             // 
@@ -222,7 +222,7 @@
             this.MaximizeBox = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Name = "frmLogin";
-            this.Text = "Iniciar sesión - Clínica Salud";
+            this.Text = "Iniciar sesión - Clínica MiniPtc";
             this.Load += new System.EventHandler(this.frmLogin_Load);
             this.pnlLineaLogin.ResumeLayout(false);
             this.pnlLateral.ResumeLayout(false);

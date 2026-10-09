@@ -377,7 +377,7 @@
             this.lblLogo.Location = new System.Drawing.Point(55, 22);
             this.lblLogo.Name = "lblLogo";
             this.lblLogo.TabIndex = 22;
-            this.lblLogo.Text = "Clínica Salud";
+            this.lblLogo.Text = "Clínica MiniPtc";
             // 
             // frmDashboard
             // 
@@ -394,7 +394,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Name = "frmDashboard";
-            this.Text = "Clínica Salud";
+            this.Text = "Clínica MiniPtc";
             this.Load += new System.EventHandler(this.frmDashboard_Load);
             this.pnlLogo.ResumeLayout(false);
             this.pnlUsuario.ResumeLayout(false);

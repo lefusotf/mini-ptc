@@ -7,7 +7,7 @@ namespace Modelos.Conexion_DB
     public class Conexion
     {
         private static string servidor = "(localdb)\\MSSQLLocalDB";
-        private static string baseDeDatos = "ClinicaSaludDB";
+        private static string baseDeDatos = "ClinicaMiniPtcDB";
 
         public static SqlConnection conectar()
         {
