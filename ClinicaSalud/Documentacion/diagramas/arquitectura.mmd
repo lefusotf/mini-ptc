@@ -1,0 +1,15 @@
+flowchart LR
+    U(("Usuario")) --> V
+    subgraph V["Proyecto VISTA (formularios)"]
+        direction TB
+        L["Login/frmLogin"] --> D["Dashboard/frmDashboard<br/>+ frmInicio (resumen)"]
+        D --> F["Gestion/frmPacientes · frmMedicos · frmCitas<br/>frmHistorial · frmUsuarios · frmPermisos<br/>frmEspecialidades · frmBitacora"]
+    end
+    subgraph MO["Proyecto MODELOS (clases)"]
+        direction TB
+        CL["Entidades/<br/>Paciente · Medico · Cita · Historial<br/>Usuario · Permiso · Especialidad · Bitacora · Sesion"]
+        C["Conexion_DB/Conexion.conectar()"]
+        CL --> C
+    end
+    V -- "cargar / buscar / Insertar<br/>Actualizar / Eliminar" --> CL
+    C -- "SqlConnection + parámetros" --> DB[("SQL Server<br/>ClinicaSaludDB")]
