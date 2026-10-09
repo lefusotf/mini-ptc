@@ -6,7 +6,6 @@ namespace Modelos.Conexion_DB
 {
     public class Conexion
     {
-        // Cambiar por el nombre del servidor que aparece en SQL Server Management Studio
         private static string servidor = "(localdb)\\MSSQLLocalDB";
         private static string baseDeDatos = "ClinicaSaludDB";
 

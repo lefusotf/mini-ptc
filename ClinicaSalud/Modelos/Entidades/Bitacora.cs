@@ -5,7 +5,6 @@ using System.Data.SqlClient;
 
 namespace Modelos.Entidades
 {
-    // Registro de actividades: guarda quién hizo cada acción y cuándo
     public class Bitacora
     {
         public static void registrar(string accion)

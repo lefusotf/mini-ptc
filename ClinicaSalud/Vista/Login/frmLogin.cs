@@ -33,7 +33,6 @@ namespace Vista.Login
             }
             if (hayError) return;
 
-            // La contraseña se verifica con BCrypt dentro de Usuario.iniciarSesion
             if (Usuario.iniciarSesion(txtUsuario.Text.Trim(), txtClave.Text))
             {
                 Bitacora.registrar("Inició sesión");

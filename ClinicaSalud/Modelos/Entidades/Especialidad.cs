@@ -97,7 +97,6 @@ namespace Modelos.Entidades
             }
             catch (SqlException ex)
             {
-                // 547: el registro está relacionado con otra tabla y no se puede borrar
                 if (ex.Number == 547)
                     MessageBox.Show("No se puede eliminar porque hay médicos con esta especialidad.", "Conflicto de Referencias", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                 else

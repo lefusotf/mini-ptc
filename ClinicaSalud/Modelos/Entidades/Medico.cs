@@ -62,7 +62,6 @@ namespace Modelos.Entidades
             return tablaVirtual;
         }
 
-        // Si el usuario que inició sesión es médico, devuelve su idMedico (0 si no lo es)
         public static int obtenerIdMedico(int idUsuario)
         {
             using (SqlConnection conexion = Conexion.conectar())

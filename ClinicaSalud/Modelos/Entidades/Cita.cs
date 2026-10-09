@@ -43,7 +43,6 @@ namespace Modelos.Entidades
             return tablaVirtual;
         }
 
-        // Evita la duplicidad de horarios: un médico no puede tener dos citas a la misma fecha y hora
         public bool horarioOcupado()
         {
             string comandoSQL = @"SELECT COUNT(*) FROM Cita

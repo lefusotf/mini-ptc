@@ -8,7 +8,6 @@ namespace Vista.Gestion
 {
     public partial class frmBitacora : Form
     {
-
         public frmBitacora()
         {
             InitializeComponent();

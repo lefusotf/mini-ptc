@@ -2,7 +2,6 @@
 
 namespace Modelos.Entidades
 {
-    // Guarda los datos del usuario que inició sesión mientras el programa está abierto
     public static class Sesion
     {
         public static int IdUsuario;

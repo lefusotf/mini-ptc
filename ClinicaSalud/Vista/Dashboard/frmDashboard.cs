@@ -22,7 +22,6 @@ namespace Vista.Dashboard
             lblRolUsuario.Text = Sesion.Rol;
             lblFecha.Text = DateTime.Now.ToString("dddd, dd 'de' MMMM 'de' yyyy");
 
-            // El menú solo muestra las pantallas que el rol tiene permitidas
             btnPacientes.Visible = Sesion.TienePermiso("Pacientes");
             btnMedicos.Visible = Sesion.TienePermiso("Medicos");
             btnEspecialidades.Visible = Sesion.TienePermiso("Especialidades");

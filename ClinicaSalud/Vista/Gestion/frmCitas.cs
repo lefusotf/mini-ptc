@@ -28,7 +28,6 @@ namespace Vista.Gestion
             cmbMedico.DisplayMember = "nombreMedico";
             cmbMedico.ValueMember = "idMedico";
 
-            // El médico solo ve sus citas y solo puede cambiar el estado
             if (esMedico)
             {
                 btnGuardar.Visible = false;

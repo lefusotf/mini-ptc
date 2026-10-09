@@ -22,13 +22,11 @@ namespace Modelos.Entidades
         public int IdRol { get => idRol; set => idRol = value; }
         public bool Activo { get => activo; set => activo = value; }
 
-        // Encripta la contraseña con BCrypt antes de guardarla en la base de datos
         public static string encriptar(string clave)
         {
             return BCrypt.Net.BCrypt.HashPassword(clave);
         }
 
-        // Compara la contraseña escrita con la contraseña encriptada guardada
         public static bool verificarClave(string clave, string claveEncriptada)
         {
             try
@@ -79,7 +77,6 @@ namespace Modelos.Entidades
                         return false;
                     }
 
-                    // Verificación de la contraseña con BCrypt
                     if (!verificarClave(clave, claveGuardada))
                         return false;
 
@@ -134,7 +131,7 @@ namespace Modelos.Entidades
                     using (SqlCommand comandoObjeto = new SqlCommand(comandoSQL, conexion))
                     {
                         comandoObjeto.Parameters.AddWithValue("@nombreUsuario", nombreUsuario);
-                        comandoObjeto.Parameters.AddWithValue("@clave", encriptar(clave)); // se guarda encriptada
+                        comandoObjeto.Parameters.AddWithValue("@clave", encriptar(clave));
                         comandoObjeto.Parameters.AddWithValue("@nombreCompleto", nombreCompleto);
                         comandoObjeto.Parameters.AddWithValue("@id_Rol", idRol);
                         comandoObjeto.Parameters.AddWithValue("@activo", activo);
