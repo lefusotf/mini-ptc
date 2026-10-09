@@ -22,12 +22,16 @@ namespace Vista.Gestion
             cmbEspecialidad.DisplayMember = "nombreEspecialidad";
             cmbEspecialidad.ValueMember = "idEspecialidad";
 
-            cmbUsuario.DataSource = Medico.cargarUsuariosMedicos();
-            cmbUsuario.DisplayMember = "nombreUsuario";
-            cmbUsuario.ValueMember = "idUsuario";
 
             cargarDatagridMedicos();
             limpiar();
+        }
+
+        private void cargarComboUsuarios(int idMedico)
+        {
+            cmbUsuario.DataSource = Medico.cargarUsuariosMedicos(idMedico);
+            cmbUsuario.DisplayMember = "nombreUsuario";
+            cmbUsuario.ValueMember = "idUsuario";
         }
 
         private void cargarDatagridMedicos()
@@ -142,7 +146,8 @@ namespace Vista.Gestion
             mskTelefono.Clear();
             txtCorreo.Clear();
             cmbEspecialidad.SelectedIndex = -1;
-            if (cmbUsuario.Items.Count > 0) cmbUsuario.SelectedIndex = 0;
+            cargarComboUsuarios(0);
+            cmbUsuario.SelectedIndex = 0;
             errorProvider1.Clear();
             dgvMedicos.ClearSelection();
         }
@@ -157,6 +162,7 @@ namespace Vista.Gestion
             if (e.RowIndex < 0) return;
             DataGridViewRow fila = dgvMedicos.Rows[e.RowIndex];
             idSeleccionado = Convert.ToInt32(fila.Cells["#"].Value);
+            cargarComboUsuarios(idSeleccionado);
             txtNombre.Text = fila.Cells["Medico"].Value.ToString();
             mskTelefono.Text = fila.Cells["Telefono"].Value.ToString();
             txtCorreo.Text = fila.Cells["Correo"].Value.ToString();

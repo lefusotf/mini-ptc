@@ -46,13 +46,19 @@ namespace Modelos.Entidades
             return tablaVirtual;
         }
 
-        public static DataTable cargarUsuariosMedicos()
+        public static DataTable cargarUsuariosMedicos(int idMedico)
         {
             DataTable tablaVirtual = new DataTable();
             using (SqlConnection conexion = Conexion.conectar())
             {
                 if (conexion == null) return tablaVirtual;
-                SqlDataAdapter adaptador = new SqlDataAdapter("SELECT idUsuario, nombreUsuario FROM Usuario WHERE id_Rol = 2;", conexion);
+                string comandoSQL = @"SELECT idUsuario, nombreUsuario FROM Usuario
+                                      WHERE id_Rol = 2
+                                        AND idUsuario NOT IN (SELECT id_Usuario FROM Medico
+                                                              WHERE id_Usuario IS NOT NULL AND idMedico <> @idMedico);";
+                SqlCommand comandoObjeto = new SqlCommand(comandoSQL, conexion);
+                comandoObjeto.Parameters.AddWithValue("@idMedico", idMedico);
+                SqlDataAdapter adaptador = new SqlDataAdapter(comandoObjeto);
                 adaptador.Fill(tablaVirtual);
             }
             DataRow fila = tablaVirtual.NewRow();
