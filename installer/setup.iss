@@ -2,14 +2,17 @@
 ; Instala el programa + SQL Server Express (si no esta) + crea la base de datos.
 ; Ver LEEME.md para los pasos.
 
-; ---- EDITAR ESTOS VALORES ------------------------------------------------
+; ---- EDITAR ESTOS VALORES (solo lo que esta entre comillas) ----------------
+; Nombre del programa que se va a ver al instalar
 #define AppName    "PTC"
 #define AppVersion "1.0"
-#define AppExe     "PTC.exe"                  ; nombre del .exe que genera Visual Studio
-#define BuildDir   "..\TuProyecto\bin\Release" ; carpeta con el .exe compilado en Release
-                                               ; (.NET 6+: usar la carpeta "publish", ver LEEME.md)
-#define DbName     "Gestion_administrativa_y_escolar" ; debe ser igual al nombre que usa base.sql
-; --------------------------------------------------------------------------
+; Nombre del .exe que genera Visual Studio (esta dentro de bin\Release)
+#define AppExe     "PTC.exe"
+; Ruta COMPLETA de la carpeta bin\Release de tu proyecto
+#define BuildDir   "C:\CAMBIAR\RUTA\bin\Release"
+; Nombre de la base de datos: debe ser igual al que usa base.sql
+#define DbName     "Gestion_administrativa_y_escolar"
+; ------------------------------------------------------------------------
 
 #define Instance   "SQLEXPRESS"
 

@@ -71,7 +71,7 @@ try {
     }
     Escribir "Script ejecutado: $n lotes."
 
-    # Si el script se frenó solo (por ejemplo con SET NOEXEC) la base queda vacía: no darla por buena
+    # Si el script se freno solo (por ejemplo con SET NOEXEC) la base queda vacia: no darla por buena
     $cmd = $cnBase.CreateCommand()
     $cmd.CommandText = "SELECT COUNT(*) FROM sys.tables"
     $tablas = [int]$cmd.ExecuteScalar()
