@@ -1,0 +1,10 @@
+# Compilacion de Visual Studio
+bin/
+obj/
+.vs/
+*.user
+
+# Instalador: archivos pesados o con datos de pacientes, NO subir al repo
+installer/base.sql
+installer/prereqs/
+installer/salida/
