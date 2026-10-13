@@ -8,7 +8,7 @@
 #define AppExe     "PTC.exe"                  ; nombre del .exe que genera Visual Studio
 #define BuildDir   "..\TuProyecto\bin\Release" ; carpeta con el .exe compilado en Release
                                                ; (.NET 6+: usar la carpeta "publish", ver LEEME.md)
-#define DbName     "PTC"                      ; nombre de la base en SSMS
+#define DbName     "Gestion_administrativa_y_escolar" ; debe ser igual al nombre que usa base.sql
 ; --------------------------------------------------------------------------
 
 #define Instance   "SQLEXPRESS"

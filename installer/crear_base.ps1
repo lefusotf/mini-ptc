@@ -60,9 +60,23 @@ try {
     $cnBase = Open-Conn $Base
     $n = 0
     foreach ($lote in $lotes) {
-        if ($lote.Trim().Length -gt 0) { Run-Sql $cnBase $lote; $n++ }
+        if ($lote.Trim().Length -eq 0) { continue }
+        $n++
+        try { Run-Sql $cnBase $lote }
+        catch {
+            $inicio = ($lote.Trim() -split "\r?\n" | Select-Object -First 3) -join " | "
+            Escribir "Fallo el lote $n ($inicio)"
+            throw
+        }
     }
     Escribir "Script ejecutado: $n lotes."
+
+    # Si el script se frenó solo (por ejemplo con SET NOEXEC) la base queda vacía: no darla por buena
+    $cmd = $cnBase.CreateCommand()
+    $cmd.CommandText = "SELECT COUNT(*) FROM sys.tables"
+    $tablas = [int]$cmd.ExecuteScalar()
+    Escribir "Tablas creadas: $tablas"
+    if ($tablas -eq 0) { throw "El script no creo ninguna tabla (revisar $Script)" }
 
     # Permisos para cualquier usuario de Windows de la PC (el nombre del grupo depende del idioma)
     $grupo = (New-Object System.Security.Principal.SecurityIdentifier "S-1-5-32-545").
